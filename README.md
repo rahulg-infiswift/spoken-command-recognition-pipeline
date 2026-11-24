@@ -54,4 +54,6 @@ Data was the bottleneck, not the model. The design of the synthetic positives an
 
 ---
 
-<!-- TODO: link to portfolio site and to the open reimplementation once published -->
+Full portfolio: [rahulg-infiswift.github.io](https://rahulg-infiswift.github.io/)
+
+<!-- TODO: link to the open reimplementation once published -->
