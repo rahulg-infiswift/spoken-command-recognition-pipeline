@@ -31,6 +31,7 @@ Freezing the first two stages means only a small classifier has to be trained. T
 ### Command classifier
 - **Architecture.** A compact network of dense layers (Linear + LayerNorm blocks), with a configurable number of blocks. It ends in one softmax over the command words plus a background class and is trained with cross-entropy.
 - **NPU version.** For the Hailo accelerator, the same network was rewritten with convolutional layers so it compiles for the NPU. I fixed the export tensor layout to `(B, C, H, W)`.
+- **Also explored: a multi-head variant.** I also built a version with separate output heads for **action**, **amount** and **direction**, so commands are recognised as combinations instead of a fixed word list. The single classifier was accurate enough for the first-phase demo, so it shipped. The multi-head design is the better fit as the command vocabulary grows combinatorially.
 
 ### Dataset
 - **Built from scratch.** No recordings of the command vocabulary existed. Positives were synthesised with Qwen TTS voice cloning, using reference speakers from multi-speaker English and Japanese corpora for speaker diversity.
