@@ -24,11 +24,11 @@
   <rect class="box" x="20" y="34" width="160" height="64" rx="6"/>
   <text class="t" x="32" y="61">TTS positives</text><text class="s" x="32" y="81">voice cloning</text>
   <rect class="box" x="200" y="34" width="160" height="64" rx="6"/>
-  <text class="t" x="212" y="61">Hard negatives</text><text class="s" x="212" y="81">easy · medium · hard</text>
+  <text class="t" x="212" y="61">Hard negatives</text><text class="s" x="212" y="81">speech · music · sounds</text>
   <rect class="box" x="380" y="34" width="160" height="64" rx="6"/>
-  <text class="t" x="392" y="61">Augment + mel</text><text class="s" x="392" y="81">room IRs · background</text>
+  <text class="t" x="392" y="61">Augment + embed</text><text class="s" x="392" y="81">RIRs · noise · features</text>
   <rect class="box" x="560" y="34" width="160" height="64" rx="6"/>
-  <text class="t" x="572" y="61">Train</text><text class="s" x="572" y="81">multi-head CNN</text>
+  <text class="t" x="572" y="61">Train</text><text class="s" x="572" y="81">custom classifier</text>
   <rect class="hub" x="740" y="34" width="160" height="64" rx="6"/>
   <text class="t" x="752" y="61">Export</text><text class="s" x="752" y="81">ONNX · quantised</text>
   <path class="ln" d="M180 66 H198" marker-end="url(#a)"/>
@@ -40,15 +40,15 @@
 
   <text class="lane" x="20" y="180">RUNTIME · EDGE DEVICE</text>
   <rect class="box" x="20" y="190" width="160" height="64" rx="6"/>
-  <text class="t" x="32" y="217">Microphone</text><text class="s" x="32" y="237">16 kHz, 10 ms frames</text>
+  <text class="t" x="32" y="217">Mel spectrogram</text><text class="s" x="32" y="237">16 kHz audio, native</text>
   <rect class="box" x="200" y="190" width="160" height="64" rx="6"/>
-  <text class="t" x="212" y="217">Mel frontend</text><text class="s" x="212" y="237">mel + embedding</text>
+  <text class="t" x="212" y="217">Embedding model</text><text class="s" x="212" y="237">pretrained, frozen</text>
   <rect class="hub" x="380" y="190" width="160" height="64" rx="6"/>
-  <text class="t" x="392" y="217">Multi-head CNN</text><text class="s" x="392" y="237">Hailo accelerator</text>
+  <text class="t" x="392" y="217">Classifier</text><text class="s" x="392" y="237">custom · Hailo NPU</text>
   <rect class="box" x="560" y="190" width="160" height="64" rx="6"/>
   <text class="t" x="572" y="217">Detection policy</text><text class="s" x="572" y="237">threshold + RMS gate</text>
   <rect class="box" x="740" y="190" width="160" height="64" rx="6"/>
-  <text class="t" x="752" y="217">Command</text><text class="s" x="752" y="237">action, amount, dir.</text>
+  <text class="t" x="752" y="217">Command</text><text class="s" x="752" y="237">40+ word vocabulary</text>
   <path class="ln" d="M180 222 H198" marker-end="url(#a)"/>
   <path class="ln" d="M360 222 H378" marker-end="url(#a)"/>
   <path class="ln" d="M540 222 H558" marker-end="url(#a)"/>
