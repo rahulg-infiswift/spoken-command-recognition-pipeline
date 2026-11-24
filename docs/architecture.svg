@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 270" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <style>
+    .box { fill: #FFFFFF; stroke: #C9D1DB; stroke-width: 1.2; }
+    .hub { fill: #FDF0E8; stroke: #C2410C; stroke-width: 1.4; }
+    .t { fill: #141A22; font-size: 15px; font-weight: 600; }
+    .s { fill: #586273; font-size: 12px; }
+    .lane { fill: #586273; font-size: 11px; letter-spacing: 1.2px; font-family: ui-monospace, Menlo, monospace; }
+    .ln { stroke: #8A94A3; stroke-width: 1.6; fill: none; }
+    .ah { fill: #8A94A3; }
+    @media (prefers-color-scheme: dark) {
+      .box { fill: #171E27; stroke: #34404F; }
+      .hub { fill: #3A2318; stroke: #FF8A4C; }
+      .t { fill: #E6EAF0; }
+      .s, .lane { fill: #97A1B0; }
+      .ln { stroke: #6B7583; }
+      .ah { fill: #6B7583; }
+    }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="ah" d="M0,0 L10,5 L0,10 z"/></marker>
+  </defs>
+
+  <text class="lane" x="20" y="22">TRAINING · OFFLINE (GPU)</text>
+  <rect class="box" x="20" y="34" width="160" height="64" rx="6"/>
+  <text class="t" x="32" y="61">TTS positives</text><text class="s" x="32" y="81">voice cloning</text>
+  <rect class="box" x="200" y="34" width="160" height="64" rx="6"/>
+  <text class="t" x="212" y="61">Mine negatives</text><text class="s" x="212" y="81">speech · sounds · mic</text>
+  <rect class="box" x="380" y="34" width="160" height="64" rx="6"/>
+  <text class="t" x="392" y="61">Augment + mel</text><text class="s" x="392" y="81">room IRs · background</text>
+  <rect class="box" x="560" y="34" width="160" height="64" rx="6"/>
+  <text class="t" x="572" y="61">Train</text><text class="s" x="572" y="81">single / multi-class</text>
+  <rect class="hub" x="740" y="34" width="160" height="64" rx="6"/>
+  <text class="t" x="752" y="61">Export</text><text class="s" x="752" y="81">ONNX · NPU · calib</text>
+  <path class="ln" d="M180 66 H198" marker-end="url(#a)"/>
+  <path class="ln" d="M360 66 H378" marker-end="url(#a)"/>
+  <path class="ln" d="M540 66 H558" marker-end="url(#a)"/>
+  <path class="ln" d="M720 66 H738" marker-end="url(#a)"/>
+
+  <path class="ln" d="M820 98 V150 H460 V188" marker-end="url(#a)"/>
+
+  <text class="lane" x="20" y="180">RUNTIME · EDGE DEVICE</text>
+  <rect class="box" x="20" y="190" width="160" height="64" rx="6"/>
+  <text class="t" x="32" y="217">Microphone</text><text class="s" x="32" y="237">16 kHz, 10 ms frames</text>
+  <rect class="box" x="200" y="190" width="160" height="64" rx="6"/>
+  <text class="t" x="212" y="217">Mel frontend</text><text class="s" x="212" y="237">native, no onnx dep</text>
+  <rect class="hub" x="380" y="190" width="160" height="64" rx="6"/>
+  <text class="t" x="392" y="217">Classifier</text><text class="s" x="392" y="237">ORT or Hailo NPU</text>
+  <rect class="box" x="560" y="190" width="160" height="64" rx="6"/>
+  <text class="t" x="572" y="217">Detection policy</text><text class="s" x="572" y="237">threshold + RMS gate</text>
+  <rect class="box" x="740" y="190" width="160" height="64" rx="6"/>
+  <text class="t" x="752" y="217">Event</text><text class="s" x="752" y="237">wake · start · stop</text>
+  <path class="ln" d="M180 222 H198" marker-end="url(#a)"/>
+  <path class="ln" d="M360 222 H378" marker-end="url(#a)"/>
+  <path class="ln" d="M540 222 H558" marker-end="url(#a)"/>
+  <path class="ln" d="M720 222 H738" marker-end="url(#a)"/>
+</svg>
